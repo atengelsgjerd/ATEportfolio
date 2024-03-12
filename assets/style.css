@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(193, 199, 196);
+  margin: 0;
+  padding: 0;
+}
+
+.mainHeader {
+  display: flex;
+  margin: 0;
+  padding: 20px;
+  background-color: rgb(148, 170, 148);
+  height: 125px;
+}
+.mainHeader h1 {
+  text-align: left;
+  font-size: 48px;
+  margin: 0;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(116, 119, 118);
+}
+nav {
+  justify-content: flex-end;
+  display: flex;
+}
+.nav {
+  padding: 10px;
+}
