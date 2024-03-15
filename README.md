@@ -26,4 +26,6 @@ Xpert Learning Assistant via Bootcamp
 
 N/A
 
+[Click here to go to Alex's Portfolio](https://atengelsgjerd.github.io/ATEportfolio/)
+
 ![Portfolio Website](/assets/images/Portfolio%20website.png)
