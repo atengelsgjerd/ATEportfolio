@@ -5,7 +5,7 @@
 }
 
 html, body {
-  max-width: 100%;
+  max-width: 100%; 
   overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
@@ -16,8 +16,11 @@ body {
   font-family: "Comfortaa", sans-serif; /*Font on entire body is from google fonts, Comfortaa, with sans-serif as a fallback*/
 }
 
-.mainHeader { /*The main header has 20 pixels fo padding surrounding it and has a sage green background color and has a height of 135 pixels.*/
-  padding: 20px;
+.mainHeader { /*The main header has 20 pixels of padding surrounding it and has a sage green background color and has a height of 135 pixels.*/
+display: flex;
+flex-flow: row wrap;
+justify-content: space-around;
+  padding: 10px;
   background-color: rgb(148, 170, 148);
   height: 135px;
 }
@@ -30,14 +33,14 @@ h1 { /*The font size of text in the h1 element is 5 ephemeral units and the font
 
 nav { /*the nav element is in relative position and is pushed up 25 pixels from the bottom of where it sits inside of the header.
   The text is aligned to the right, and the cursor when hovering over elements within the nav bar will show a pointer.*/
-  position: relative;
-  bottom: 25px;
+  align-self: flex-end;
   text-align: right;
   cursor: pointer;
 }
 
 nav ul { /*the list within the nav element has no style type.*/
   list-style-type: none;
+  align-self: flex-end;
 }
 
 .nav { /*Elements with the .nav class selector have a display of inline-block so that they are positioned horizontally to one another.
@@ -55,7 +58,7 @@ nav ul { /*the list within the nav element has no style type.*/
   transform: scale(1.2);
 }
 
-li a { /*list items with an anchor tag will have 10 pixels of padding surrounding them and are pushed up 10 pixels from
+.nav a { /*list items with an anchor tag will have 10 pixels of padding surrounding them and are pushed up 10 pixels from
 the bottom. They have no text decoration, have black font color, and have a font size of 1.5 ephemeral units.*/
   padding: 10px;
   bottom: 10px;
@@ -65,59 +68,50 @@ the bottom. They have no text decoration, have black font color, and have a font
 }
 
 main { /*The main element is in relative position, has 100% width, and has 20 pixels of padding surrounding it*/
-  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
   width: 100%;
   padding: 20px;
 }
 
 main .Alex { /*The image that has the class selector .Alex has a max width of 100% and has a height of 500 pixels.
   It has a margin of 20 pixels and has a dark grey box shadow.*/
-  max-width: 100%;
   height: 500px;
   margin: 20px;
   box-shadow: 5px 5px 5px rgb(137, 141, 139);
 }
-#aboutHeader {
-  position: absolute;
+#aboutHeader { /* The header above the About section has relative positioning and is is text-aligned to the center. The text is styled with text-shadowing, has a white coloring, and .25 ephemeral units of spacing between each letter. It is pushed down 25 pixels from where it is relatively positioned within the webpage and has a font size of 75 pixels.*/
+  position: relative;
   text-align: center;
   text-shadow: 2px 2px 7px #111111;
-  top: 150px;
-  left: 600px;
+  top: 25px;
   font-size: 75px;
   letter-spacing: .25em;
   color: #ffffff
 }
-.About {
-  position: absolute;
-  top: 235px;
-  left: 575px;
+.About { /*The background color of the .About <section> is set to sage green and has a dark grey solid border surrounding it with 3 pixels of width. There is shadowing applied to the element as well and has a width of 75% of the page.*/
   background-color: rgb(148, 170, 148);
   border: 3px solid rgb(89, 99, 89);
   box-shadow: 5px 5px 5px rgb(137, 141, 139);
-  width: 65%; /* Adjust the width as needed */
-  margin: 20px auto; /* Center the section horizontally */
+  width: 60%; /* Adjust the width as needed */
+  height: 375px;
+  align-self: center;
 }
 
 
-main section p {
+main section p { /* The <p> element within the <section> element nested inside of the <main> element has 10 pixels of margin around it and has a line-height of 1.5 ephemeral units and a font size of 1.25 ephemeral units.*/
   margin: 10px;
   line-height: 1.5em;
-  font-size: 1.25em;
+  font-size: 1em;
 }
-hr {
+hr { /* The <hr> element has a height of 5 pixels, a border color of gray, and a background-color of gray*/
 height: 5px;
 border-color: gray;
 background-color: gray;
 }
-.Resume {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  width: 100%;
-  max-height: fit-content;
-}
 
-#resumeHeader {
+#resumeHeader { /* The header above the .Resume <section> has relative positioning and is text-aligned to the center. The text is styled with text-shadowing, has a white coloring, and .25 ephemeral units of spacing between each letter. It is pushed down 20 pixels from where it is relatively positioned within the webpage and has a font size of 75 pixels.*/
   position: relative;
   text-align: center;
   top: 20px;
@@ -126,12 +120,19 @@ background-color: gray;
   letter-spacing: .25em;
   color: #ffffff
 }
-.workExperience {
+.Resume { /* The .Resume <section> has a display property of flex and the flex direction is set to row with it also being wrapped. The content within it is centered and it has a width of 100%*/
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+  max-height: fit-content;
+}
+.workExperience { the <img> elements with the class attribute of .workExperience have heights of 500 pixels and margins of 20 pixels. A dark gray shadowing effect has been applied as well. */
   height: 500px;
   margin: 20px;
   box-shadow: 5px 5px 5px rgb(137, 141, 139);
 }
-#projectsHeader {
+#projectsHeader {  /* The header above the .Projects <section> has relative positioning and is text-aligned to the center. The text is styled with shadowing, has white coloring, and has .25 ephemeral units of spacing between each letter. It is pushed down 10 pixels from where it is relatively positioned within the webpage and has a font size of 75 pixels.*/
   position: relative;
   text-align: center;
   top: 10px;
@@ -141,22 +142,112 @@ background-color: gray;
   color: #ffffff
 }
 
-.Projects {
+.Projects {  /* The .Projects <section> has a display property of flex and the flex direction is set to row with it also being wrapped. The content within it is centered and it has a width of 100%*/
+
  display: flex;
  flex-flow: row wrap;
-  justify-content: flex-start;
+  justify-content: center;
   width: 100%;
   max-height: fit-content;
 }
-#cssSnip {
-  border: 1px solid black;
-  height: 350px;
-  width: 500px;
+#preWorkStudyGuide {
+  border: 3px solid rgb(89, 99, 89);
+  height: 400px;
+  width: 600px;
   margin: 20px;
   box-shadow: 5px 5px 5px rgb(137, 141, 139);
-  background-image: url("../assets/images/CSS.snippet.png");
+  background-image: url("../assets/images/Prework.study.guide.png");
   background-size: cover; /* Adjust the size of the background image */
   background-position: center; /* Position the background image */
     background-repeat: no-repeat; /* Prevent the background image from repeating */
 }
 
+#cssSnip { /*a background image was added to the <article> element with an id of #cssSnip with a size set to cover the entire element and to have it centered positionally.*/
+    background-image: url("../assets/images/CSS.cheat.sheet.png");
+    border: 3px solid rgb(89, 99, 89);
+    height: 350px;
+    width: 500px;
+    margin: 20px;
+    box-shadow: 5px 5px 5px rgb(137, 141, 139);
+  background-size: cover; /* Adjust the size of the background image */
+  background-position: center; /* Position the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+}
+
+article a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: transform 1s, background-color 1s, box-shadow 1s, font-size 1s;
+}
+article a:hover {
+  font-size: 20px;
+   box-shadow: 2px 2px 2px black;
+  background-color: grey;
+  transform: scale(1.2);
+}
+
+footer { /*The footer has 5 pixels of padding surrounding it and has a sage green background color and has a height of 50 pixels.*/
+display: flex;
+flex-flow: row wrap;
+justify-content: center;
+  padding: 5px;
+  background-color: rgb(148, 170, 148);
+  height: 50px;
+}
+footer ul {
+  list-style-type: none;
+}
+.contactInfo { /*Elements with the .contactInfo class selector have a display of inline-block so that they are positioned horizontally to one another.
+  Elements with the .contactInfo class selector have 5 pixels of padding around them.*/
+  display: inline-block;
+  padding: 5px; 
+}
+@media screen and (max-width:1406px) {
+  main { /*The main element is in relative position, has 100% width, and has 20 pixels of padding surrounding it*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+  }
+}
+@media screen and (max-width:1287px) {
+  .About { /*The background color of the .About <section> is set to sage green and has a dark grey solid border surrounding it with 3 pixels of width. There is shadowing applied to the element as well and has a width of 75% of the page.*/
+    background-color: rgb(148, 170, 148);
+    border: 3px solid rgb(89, 99, 89);
+    box-shadow: 5px 5px 5px rgb(137, 141, 139);
+    width: 80%; /* Adjust the width as needed */
+    height: 375px;
+    align-self: center;
+  }
+}
+@media screen and (max-width:980px) {
+  .About { /*The background color of the .About <section> is set to sage green and has a dark grey solid border surrounding it with 3 pixels of width. There is shadowing applied to the element as well and has a width of 75% of the page.*/
+    background-color: rgb(148, 170, 148);
+    border: 3px solid rgb(89, 99, 89);
+    box-shadow: 5px 5px 5px rgb(137, 141, 139);
+    width: 85%; /* Adjust the width as needed */
+    height: 375px;
+    align-self: center;
+  }
+  main section p { /* The <p> element within the <section> element nested inside of the <main> element has 10 pixels of margin around it and has a line-height of 1.5 ephemeral units and a font size of 1.25 ephemeral units.*/
+    margin: 10px;
+    line-height: 1.5em;
+    font-size: .9em;
+}
+}
+@media screen and (max-width:796px) {
+  main section p { /* The <p> element within the <section> element nested inside of the <main> element has 10 pixels of margin around it and has a line-height of 1.5 ephemeral units and a font size of 1.25 ephemeral units.*/
+    margin: 10px;
+    line-height: 1.5em;
+    font-size: .85em;
+}
+}
+@media screen and (max-width: 673px) {
+  main section p { /* The <p> element within the <section> element nested inside of the <main> element has 10 pixels of margin around it and has a line-height of 1.5 ephemeral units and a font size of 1.25 ephemeral units.*/
+    margin: 10px;
+    line-height: 1.5em;
+    font-size: .75em;
+}
+}
