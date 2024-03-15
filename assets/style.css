@@ -13,7 +13,7 @@ body {
   background-color: rgb(193, 199, 196); /*Entire background of body of webpage is light grey*/
   margin: 0;
   padding: 0;
-  font-family: "Comfortaa", sans-serif; /*Font on entire body is from google fonts, Comfortaa, with sans-serif as a fallback*/
+  font-family: "Quicksand", sans-serif; /*Font on entire body is from google fonts, Comfortaa, with sans-serif as a fallback*/
 }
 
 .mainHeader { /*The main header has 20 pixels of padding surrounding it and has a sage green background color and has a height of 135 pixels.*/
